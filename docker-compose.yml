@@ -1,0 +1,7 @@
+version: "2"
+services:
+  test-container:
+    image: ocr-docker:v2  
+    container_name: test-container
+    ports:
+      - 6080:80 # Map noVNC to port 6080
