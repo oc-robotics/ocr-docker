@@ -1,16 +1,17 @@
-# Specify base image- lightweight humble
-FROM ros:humble-ros-core 
+# Base image
+# FROM osrf/ros:humble-desktop
+FROM tiryoh/ros2-desktop-vnc:humble
 
 # Install packages
 RUN apt-get update && apt-get install -y \
-    ros-humble-demo-nodes-cpp \
-    ros-humble-foxglove-bridge \
-    ros-humble-tf2-ros
+    ros-humble-gazebo-ros-pkgs \
+    && apt-get clean && rm -rf /var/lib/apt/lists/* \
 
-# Source the ROS install
+# Set environment variables
+# ENV DISPLAY=0
+
+# Source the ROS installation in all interactive shells
 RUN echo "source /opt/ros/humble/setup.bash >> ~/.bashrc"
 
-# Set the default command (demo sample)
-# CMD ["bash", "-c", "source /opt/ros/humble/setup.bash && ros2 launch demo_nodes_cpp talker_listener.launch.py"]
-
-
+# Default command
+CMD ["bash"]
