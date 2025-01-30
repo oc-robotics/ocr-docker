@@ -7,7 +7,7 @@ services:
       - DISPLAY=:1.0
       - USER=root
     volumes:
-      - ~/ocr/dev_ws/src/differential_drive_robot:/ocr/dev_ws/src/differential_drive_robot
+      - ../dev_ws/:/ocr/dev_ws/
     ports:
       - 6080:80 # Map noVNC to port 6080
     tty: true
