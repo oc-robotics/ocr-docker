@@ -7,7 +7,7 @@ services:
       - DISPLAY=:1.0
       - USER=root
     volumes:
-      - ../dev_ws/:/ocr/dev_ws/
+      - ../dev_ws/:/ocr/dev_ws/ # <host_path>:<container_path>
     ports:
       - 6080:80 # Map noVNC to port 6080
     tty: true
