@@ -2,6 +2,11 @@ version: "2"
 services:
   test-container:
     image: ocr-docker:humble
-    container_name: test-container
+    container_name: ocr-humble-nekton
+    environment:
+      - DISPLAY=:1.0
+      - USER=root
     ports:
       - 6080:80 # Map noVNC to port 6080
+    tty: true
+    restart: unless-stopped
