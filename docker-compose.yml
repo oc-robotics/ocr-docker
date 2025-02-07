@@ -1,13 +1,16 @@
 version: "2"
 services:
   test-container:
+    # image: mwoodward6/nekton:humble
     image: ocr-docker:humble
-    container_name: ocr-humble-nekton
+    container_name: ocr-humble-nekton-og
     environment:
       - DISPLAY=:1.0
       - USER=root
     volumes:
-      - ../dev_ws/:/ocr/dev_ws/ # <host_path>:<container_path>
+      # - ../dev_ws/:/nekton/dev_ws/ # <host_path>:<container_path>
+      - ../dev_ws/:/ocr/dev_ws/
+      - ../training_ws/:/ocr/training_ws/
     ports:
       - 6080:80 # Map noVNC to port 6080
     tty: true

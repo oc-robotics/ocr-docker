@@ -33,20 +33,36 @@ cd ocr-docker
 └── training_ws/
 ```
 
-- Pull the image from Docker Hub
+- Pull the base image from Docker Hub
 ```bash
-docker pull chxtiodev/ocr-docker:humble
+docker pull mwoodward6/nekton:humble
+```
+- Build the custom image
+```bash
+docker build -t ocr-docker:humble .
 ```
 
 ## Run the docker container
-- Run the container in detached mode
+- Start the container in the background (detached mode)
 ```bash
 docker-compose up -d
 ```
 
 - Open an interactive bash shell inside the container to run commands 
 ```bash
-docker exec -it ocr-humble-nekton bash
+docker exec -it ocr-humble-nekton-og bash
 ```
 
 - Browse http://localhost:6080/ to access the remote desktop via VNC 
+
+
+- Stop the container
+```bash
+exit # Exit the interactive shell
+docker-compose stop
+```
+
+- If you need to remove the container
+```bash
+docker-compose down
+```
