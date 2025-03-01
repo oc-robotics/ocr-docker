@@ -9,7 +9,7 @@ services:
       - USER=root
     volumes:
       # - ../dev_ws/:/nekton/dev_ws/ # <host_path>:<container_path>
-      - ../dev_ws/:/ocr/dev_ws/
+      - ~/ocr/dev_ws/:/ocr/dev_ws/
       - ../training_ws/:/ocr/training_ws/
     ports:
       - 6080:80 # Map noVNC to port 6080

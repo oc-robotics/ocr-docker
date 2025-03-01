@@ -66,3 +66,23 @@ docker-compose stop
 ```bash
 docker-compose down
 ```
+
+## Troubleshooting
+
+### Fix "ports not available" error
+- If you encounter an error due to port 6080 being in use, check which processes are using it
+
+```bash
+sudo lsof -i :6080
+```
+
+- Sample output
+```
+COMMAND    PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+docker-pr  995 root    4u  IPv4  27629      0t0  TCP *:6080 (LISTEN)
+docker-pr 1001 root    4u  IPv6  26542      0t0  TCP *:6080 (LISTEN)
+```
+- Stop the processes
+```bash
+sudo kill -9 995 1001
+```
