@@ -1,6 +1,6 @@
 # ocr-docker
 
-## Step 2: Run the docker 
+## Step 2: Run the docker container
 - If you haven't installed the container yet, scroll down to [Step 1- Run the docker container](https://github.com/oc-robotics/ocr-docker/edit/master/README.md#step-1-install-the-container)
 - Start the container in the background (detached mode)
 ```bash
