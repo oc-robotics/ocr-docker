@@ -1,6 +1,55 @@
 # ocr-docker
 
-## Installation
+## Step 2: Run the docker 
+- If you haven't installed the container yet, scroll down to [Step 1- Run the docker container](https://github.com/oc-robotics/ocr-docker/edit/master/README.md#step-1-install-the-container)
+- Start the container in the background (detached mode)
+```bash
+docker-compose up -d
+```
+
+- Open an interactive bash shell inside the container to run commands 
+```bash
+docker exec -it ocr-humble-nekton-og bash
+```
+
+- Browse http://localhost:6080/ to access the remote desktop via VNC 
+
+
+- Stop the container
+```bash
+exit # Exit the interactive shell
+docker-compose stop
+```
+
+- If you need to remove the container
+```bash
+docker-compose down
+)
+- Start the container in the background (detached mode)
+```bash
+docker-compose up -d
+```
+
+- Open an interactive bash shell inside the container to run commands 
+```bash
+docker exec -it ocr-humble-nekton-og bash
+```
+
+- Browse http://localhost:6080/ to access the remote desktop via VNC 
+
+
+- Stop the container
+```bash
+exit # Exit the interactive shell
+docker-compose stop
+```
+
+- If you need to remove the container
+```bash
+docker-compose down
+```
+
+## Step 1: Install the container
 
 - Install and open [Docker Desktop](https://docs.docker.com/desktop/)
 
@@ -42,29 +91,6 @@ docker pull mwoodward6/nekton:humble
 docker build -t ocr-docker:humble .
 ```
 
-## Run the docker container
-- Start the container in the background (detached mode)
-```bash
-docker-compose up -d
-```
-
-- Open an interactive bash shell inside the container to run commands 
-```bash
-docker exec -it ocr-humble-nekton-og bash
-```
-
-- Browse http://localhost:6080/ to access the remote desktop via VNC 
-
-
-- Stop the container
-```bash
-exit # Exit the interactive shell
-docker-compose stop
-```
-
-- If you need to remove the container
-```bash
-docker-compose down
 ```
 
 ## Troubleshooting
