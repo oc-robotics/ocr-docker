@@ -1,5 +1,7 @@
 # ocr-docker
-> [!warning] If you have already installed the container, skip to [Step 2: Run the docker container](#step-2-run-the-docker-container).
+> [!IMPORTANT]
+> 
+> If you have already installed the container, skip to [Step 2: Run the docker container](#step-2-run-the-docker-container).
 
 ## Step 1: Install the container
 
